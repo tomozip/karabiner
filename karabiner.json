@@ -13,7 +13,138 @@
                     "basic.to_if_alone_timeout_milliseconds": 1000,
                     "basic.to_if_held_down_threshold_milliseconds": 500
                 },
-                "rules": []
+                "rules": [
+                    {
+                        "description": "Change Control + h/j/k/l to Arrows",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな） (rev 2)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_kana"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
             },
             "devices": [],
             "fn_function_keys": [
@@ -116,7 +247,48 @@
             ],
             "name": "Default profile",
             "selected": true,
-            "simple_modifications": [],
+            "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": {
+                        "key_code": "right_control"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "left_control"
+                    },
+                    "to": {
+                        "key_code": "caps_lock"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "right_option"
+                    },
+                    "to": {
+                        "key_code": "escape"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": {
+                        "key_code": "left_command"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "left_command"
+                    },
+                    "to": {
+                        "key_code": "right_command"
+                    }
+                }
+            ],
             "virtual_hid_keyboard": {
                 "country_code": 0
             }
