@@ -51,10 +51,11 @@
                                     "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
-                                            "control"
+                                            "control",
+                                            "command"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "caps_lock"
                                         ]
                                     }
                                 },
@@ -73,6 +74,7 @@
                                     "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
+                                            "command",
                                             "control"
                                         ],
                                         "optional": [
@@ -111,7 +113,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "quote",
+                                    "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
