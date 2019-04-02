@@ -44,7 +44,13 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                      "type": "frontmost_application_unless",
+                                      "bundle_identifiers": ["^com\\.github\\.atom"]
+                                    }
+                                ]
                             },
                             {
                                 "from": {
@@ -172,7 +178,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "quote",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -206,7 +212,13 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                      "type": "frontmost_application_unless",
+                                      "bundle_identifiers": ["^com\\.github\\.atom"]
+                                    }
+                                ]
                             },
                             {
                                 "from": {
@@ -300,7 +312,13 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                      "type": "frontmost_application_unless",
+                                      "bundle_identifiers": ["^com\\.github\\.atom"]
+                                    }
+                                ]
                             }
                         ]
                       },
