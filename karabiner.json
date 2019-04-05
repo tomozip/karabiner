@@ -15,7 +15,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Original",
+                        "description": "Original keybinds",
                         "manipulators": [
                             {
                                 "from": {
@@ -51,6 +51,46 @@
                                       "bundle_identifiers": ["^com\\.github\\.atom"]
                                     }
                                 ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
                             },
                             {
                                 "from": {
@@ -321,7 +361,54 @@
                                 ]
                             }
                         ]
-                      },
+                    },
+                    {
+                        "description": "Original reform keybinds",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "command"
+                                    }
+                                ],
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                      "type": "frontmost_application_unless",
+                                      "bundle_identifiers": ["^com\\.google\\.Chrome"]
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ],
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "command"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "Change Control + h/j/k/l to Arrows",
                         "manipulators": [
